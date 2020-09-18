@@ -1,0 +1,262 @@
+* {
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {  
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    z-index: 7;
+}
+
+.container::before {
+    position: absolute;
+    content: "";
+    height: 2500px;
+    width: 3000px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #4481eb, #04befe);
+    top: -10%;
+    right: 50%;
+    z-index: 5;
+    transform: translateY(-50%);
+}
+
+.container::after {
+    position: absolute;
+    content: "";
+    height: 500px;
+    width: 600px;
+    border-radius: 50%;
+    background: linear-gradient(40deg,#4481eb, #ccffff);
+    bottom: -30%;
+    right: -30%;
+    z-index: -1;
+}
+
+.content {
+    height: 30vh;
+    text-align: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.content p {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.main-image {
+    object-fit: contain;
+    z-index: 6;
+    max-height: 60vh;
+}
+
+.snow {
+    position: absolute;
+    object-fit: contain;
+    z-index: 5;
+    max-height: 40vh;
+}
+
+#quantity {
+    position: absolute;
+    top: 3.7rem;
+    right: 6rem;
+    height: 1.4rem;
+    width: 1.6rem;
+    background-color: #3BC57B;
+}
+
+.cart-image {
+    object-fit: contain;
+    cursor: pointer;
+    width: 8rem;
+    top: 1rem;
+    right: 1rem;
+    position: absolute;
+}
+
+.form-container {
+    height: 100vh;
+    width: 100%;
+}
+
+.order-form {
+    margin-top: 15%;
+    margin-left: 10%;
+}
+
+.menu-header {
+    display: flex;
+    align-items: center;
+}
+
+.menu-image {
+    object-fit: contain;
+    width: 4rem;
+}
+
+.menu-header p {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.menu-item {
+    width: 65%;
+    line-height: 2.5rem;
+    border-radius: 20px;
+    padding: 0.5rem;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.3s ease-in;
+}
+
+.menu-item:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: #28df99;
+}
+
+.icons {
+    display: flex;
+    width: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plus, .minus {
+    cursor: pointer;
+}
+
+.chill {
+    object-fit: contain;
+    width: 10rem;
+    z-index: 7;
+    transform: translate(360%, -35%);
+}
+
+.badge {
+    margin-bottom: 0.38rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    background-color: #17B9C8;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.to-cart {
+    outline: none;
+    border: none;
+    width: 10rem;
+    line-height: 1.2rem;
+    text-transform: uppercase;
+    background-color: #ff3547 ;
+    height: 3rem;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 2rem;
+    transition: 0.3s;
+}
+
+.to-cart:hover {
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+}
+
+.cart-dropdown {
+    position: absolute;
+    width: 290px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: #fff;
+    top: 90px;
+    right: 40px;
+    z-index: 5;
+}
+
+.cart-items {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.cart-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    top:0;
+    position: relative;
+}
+
+.item-details {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.name {
+    font-size: 16px;
+}
+
+.flaticons {
+    object-fit: contain;
+    max-width: 1.5rem;
+}
+
+.total {
+    background-color: #28df99;
+    width: 10rem;
+    line-height: 1.2rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.empty-cart {
+    object-fit: contain;
+    max-width: 10rem;
+}

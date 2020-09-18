@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <img src="./assets/bg3.png" style="position: absolute;width: 100%;height:100%;z-index: -1;" />
+    <div id="TV">
+        <div id="TVscreen">
+            <div
+                style="display: flex;flex-direction: row;align-items: center;justify-content: space-between;padding: 5px;flex: 10;">
+                <img src="./assets/food/11.png" style="height: 200px;flex:5"  id="img"/>
+                <div class="card" style="display: flex;flex-direction: column; flex :5;">
+                    <div style="font-family: Arial, Helvetica, sans-serif;flex:1;height: 25%;">
+                        <p style="font-size: x-small;margin-bottom: 0%;">dish</p>
+                        <div style="font-size:x-large larger;" id="name"> jelly fish</div>
+                    </div>
+                    <div style="font-family: Arial, Helvetica, sans-serif;flex: 1;height: 25%;">
+                        <p style="font-size: x-small;margin-bottom: 0%;">cost</p>
+                        <div style="font-size:x-large larger;"> ₹<span id="price">100</span></div>
+                    </div>
+                    <div style="font-family: Arial, Helvetica, sans-serif;flex: 1;height: 25%;">
+                        <p style="font-size: x-small;margin-bottom: 0%;">quantity</p>
+                        <div style="font-size:x-large larger;">
+                            <button class="button1" onclick="decr()">-</button>
+                            <span id="quantity">1</span>
+                            <button class="button1" onclick="incr()">+</button>
+                        </div>
+                    </div>
+                    <div
+                        style="font-family: Arial, Helvetica, sans-serif;display:flex;flex-direction: row-reverse;align-items: flex-end;justify-content: space-evenly;height: 50%;margin-top: 5px;">
+                        
+
+                        <div style="display: flex;flex-direction: row;">total: <button class="button yellow">₹<span id="total">200</span></button></div>
+                    </div>
+                    <button class="button" onclick="order()">order</button>
+                </div>
+            </div>
+            <p style="margin: 0%;padding-left: 100px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;">
+            click the items on coveyor belt to select your dish
+           </p>
+
+        </div>
+    </div>
+    <div id="main">
+
+        <div id="surface">
+            <div class="surfaceLine"></div>
+
+        </div>
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+        <div id="line4">
+            <div class="circle"></div>
+        </div>
+        <div class="line3"></div>
+        <div class="line2"></div>
+        <div class="line1"></div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
